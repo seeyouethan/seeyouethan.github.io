@@ -9,6 +9,7 @@
             src: url('digital-7_mono.ttf') format("truetype");
         }
     </style>
+    <link href="css/vno.css" type="text/css" rel="stylesheet">
     <link href="css/default.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/garden.js"></script>
@@ -16,93 +17,96 @@
 </head>
 
 <body>
-    <div id="mainDiv">
-        <div id="content">
-            <div id="code">
-                <span class="comments">/**</span><br />
-                <span class="space" /><span class="comments">* Today is your birthday,</span><br />
-                <span class="space" /><span class="comments">* so I write some code to celebrate your birthday.</span><br />
-                <span class="space" /><span class="comments">* Happy birthday, JoJo.</span><br />
-                <span class="space" /><span class="comments">*/</span><br />
-                Boy i = <span class="keyword">new</span> Boy(<span class="string">"liujingjie"</span>);<br />
-                Girl u = <span class="keyword">new</span> Girl(<span class="string">"chenjiaojiao"</span>);<br />
-                <span class="comments">// July 1, 2014, I met you. </span><br />
-                i.meet(u);<br />
-                <span class="comments">// October 1, 2014, I told you I love you. </span><br />
-                i.love(u);<br />
-                <span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
-                u.accepted();<br />
-                <span class="comments">// Since then, I miss you every day.</span><br />
-                i.miss(u);<br />
-                <span class="comments">// And take care of you and our love.</span><br />
-                i.takeCareOf(u);<br />
-                <span class="comments">// You say that you won't be so easy to marry me.</span><br />
-                <span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
-                <span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
-                <span class="keyword">while</span> (isHesitate) {<br />
-                <span class="placeholder" />i.waitFor(u);<br />
-                <span class="placeholder" /><span class="comments">// I think it is an important decision</span><br />
-                <span class="placeholder" /><span class="comments">// and you should think it over.</span><br />
-                <span class="placeholder" />isHesitate = u.thinkOver();<br />
-                }<br />
-                <span class="comments">// January 29, 2019, We married.</span><br />
-                i.marry(u);<br />
-                <span class="comments">// I can't say how every time I ever put my arms around you I felt that I was home.</span><br />
-                <span class="comments">// I like your smile, they are the beginning of our new day.</span><br />
-                i.liveHappilyWith(u);<br />
+    <header class="panel-cover ">
+        <div id="mainDiv" class="panel-main" style="padding-left:200px;">
+            <div id="content" class="panel-main__inner panel-inverted">
+                <div id="code" class="panel-main__content">
+                    <span class="comments">/**</span><br />
+                    <span class="space" /><span class="comments">* Today is your birthday,</span><br />
+                    <span class="space" /><span class="comments">* so I write some code to celebrate your birthday.</span><br />
+                    <span class="space" /><span class="comments">* Happy birthday, JoJo.</span><br />
+                    <span class="space" /><span class="comments">*/</span><br />
+                    Boy i = <span class="keyword">new</span> Boy(<span class="string">"liujingjie"</span>);<br />
+                    Girl u = <span class="keyword">new</span> Girl(<span class="string">"chenjiaojiao"</span>);<br />
+                    <span class="comments">// July 1, 2014, I met you. </span><br />
+                    i.meet(u);<br />
+                    <span class="comments">// October 1, 2014, I told you I love you. </span><br />
+                    i.love(u);<br />
+                    <span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
+                    u.accepted();<br />
+                    <span class="comments">// Since then, I miss you every day.</span><br />
+                    i.miss(u);<br />
+                    <span class="comments">// And take care of you and our love.</span><br />
+                    i.takeCareOf(u);<br />
+                    <span class="comments">// You say that you won't be so easy to marry me.</span><br />
+                    <span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
+                    <span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
+                    <span class="keyword">while</span> (isHesitate) {<br />
+                    <span class="placeholder" />i.waitFor(u);<br />
+                    <span class="placeholder" /><span class="comments">// I think it is an important decision</span><br />
+                    <span class="placeholder" /><span class="comments">// and you should think it over.</span><br />
+                    <span class="placeholder" />isHesitate = u.thinkOver();<br />
+                    }<br />
+                    <span class="comments">// January 29, 2019, We married.</span><br />
+                    i.marry(u);<br />
+                    <span class="comments">// I can't say how every time I ever put my arms around you I felt that I was home.</span><br />
+                    <span class="comments">// I like your smile, they are the beginning of our new day.</span><br />
+                    i.liveHappilyWith(u);<br />
 
-                
-            </div>
-            <div id="loveHeart">
-                <canvas id="garden"></canvas>
-                <div id="words">
-                    <div id="messages">
-                        JoJo, We have fallen in love for
-                        <div id="elapseClock"></div>
-                    </div>
-                    <div id="loveu">
-                        Love u forever and ever.<br />
-                        <div class="signature">- Liujingjie</div>
+
+                </div>
+                <div id="loveHeart">
+                    <canvas id="garden"></canvas>
+                    <div id="words">
+                        <div id="messages">
+                            JoJo, We have fallen in love for
+                            <div id="elapseClock"></div>
+                        </div>
+                        <div id="loveu">
+                            Love u forever and ever.<br />
+                            <div class="signature">- Liujingjie</div>
+                        </div>
                     </div>
                 </div>
+                <audio style="display:none;" controls="controls" loop="loop" autoplay="autoplay">
+                    <source src="./song/simplelove.mp3" type="audio/mpeg" />
+                </audio>
             </div>
-            <audio style="display:none;" controls="controls" loop="loop" autoplay="autoplay">
-                <source src="./song/simplelove.mp3" type="audio/mpeg" />
-            </audio>
+            <div class="panel-cover--overlay cover-blue"></div>
         </div>
-    </div>
-    <script type="text/javascript">
-        var offsetX = $("#loveHeart").width() / 2;
-        var offsetY = $("#loveHeart").height() / 2 - 55;
-        var together = new Date();
-        together.setFullYear(2014, 7, 1);
-        together.setHours(12);
-        together.setMinutes(0);
-        together.setSeconds(0);
-        together.setMilliseconds(0);
+    </header>
+        <script type="text/javascript">
+            var offsetX = $("#loveHeart").width() / 2;
+            var offsetY = $("#loveHeart").height() / 2 - 55;
+            var together = new Date();
+            together.setFullYear(2014, 7, 1);
+            together.setHours(12);
+            together.setMinutes(0);
+            together.setSeconds(0);
+            together.setMilliseconds(0);
 
-        if (!document.createElement('canvas').getContext) {
-            var msg = document.createElement("div");
-            msg.id = "errorMsg";
-            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
-            document.body.appendChild(msg);
-            $("#code").css("display", "none")
-            $("#copyright").css("position", "absolute");
-            $("#copyright").css("bottom", "10px");
-            document.execCommand("stop");
-        } else {
-            setTimeout(function () {
-                startHeartAnimation();
-            }, 5000);
+            if (!document.createElement('canvas').getContext) {
+                var msg = document.createElement("div");
+                msg.id = "errorMsg";
+                msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+                document.body.appendChild(msg);
+                $("#code").css("display", "none")
+                $("#copyright").css("position", "absolute");
+                $("#copyright").css("bottom", "10px");
+                document.execCommand("stop");
+            } else {
+                setTimeout(function () {
+                    startHeartAnimation();
+                }, 5000);
 
-            timeElapse(together);
-            setInterval(function () {
                 timeElapse(together);
-            }, 500);
+                setInterval(function () {
+                    timeElapse(together);
+                }, 500);
 
-            adjustCodePosition();
-            $("#code").typewriter();
-        }
-    </script>
+                adjustCodePosition();
+                $("#code").typewriter();
+            }
+        </script>
 </body>
 </html>

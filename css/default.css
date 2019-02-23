@@ -33,7 +33,7 @@
     font-family: "sans-serif";
     width: 500px;
     font-size: 24px;
-    color: #666
+    color: #D0D0D0;
 }
 
 #messages {
@@ -68,9 +68,11 @@
     float: left;
     width: 440px;
     height: 400px;
-    color: #333;
+    /*color: #333;*/
+    color: #000000;
     font-family: "Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";
-    font-size: 12px
+    font-size: 12px;
+    text-align: left;
 }
 
     #code .string {
@@ -91,7 +93,7 @@
     }
 
     #code .comments {
-        color: #3f7f5f
+        /* color: #3f7f5f */ color: #cc88ff;
     }
 
 #copyright {
