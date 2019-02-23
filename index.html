@@ -1,140 +1,108 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Our Love Story</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
 
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>seeyouethan.top</title>
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<meta name="description" content="">
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:title" content="">
-		<meta name="twitter:description" content="">
-		<meta property="og:type" content="article">
-		<meta property="og:title" content="">
-		<meta property="og:description" content="">
-		<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-		<!--<link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
-    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">-->
+<body>
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code">
+                <span class="comments">/**</span><br />
+                <span class="space" /><span class="comments">* Today is your birthday,</span><br />
+                <span class="space" /><span class="comments">* so I write some code to celebrate your birthday.</span><br />
+                <span class="space" /><span class="comments">* Happy birthday, JoJo.</span><br />
+                <span class="space" /><span class="comments">*/</span><br />
+                Boy i = <span class="keyword">new</span> Boy(<span class="string">"liujingjie"</span>);<br />
+                Girl u = <span class="keyword">new</span> Girl(<span class="string">"chenjiaojiao"</span>);<br />
+                <span class="comments">// July 1, 2014, I met you. </span><br />
+                i.meet(u);<br />
+                <span class="comments">// October 1, 2014, I told you I love you. </span><br />
+                i.love(u);<br />
+                <span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
+                u.accepted();<br />
+                <span class="comments">// Since then, I miss you every day.</span><br />
+                i.miss(u);<br />
+                <span class="comments">// And take care of you and our love.</span><br />
+                i.takeCareOf(u);<br />
+                <span class="comments">// You say that you won't be so easy to marry me.</span><br />
+                <span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
+                <span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
+                <span class="keyword">while</span> (isHesitate) {<br />
+                <span class="placeholder" />i.waitFor(u);<br />
+                <span class="placeholder" /><span class="comments">// I think it is an important decision</span><br />
+                <span class="placeholder" /><span class="comments">// and you should think it over.</span><br />
+                <span class="placeholder" />isHesitate = u.thinkOver();<br />
+                }<br />
+                <span class="comments">// January 29, 2019, We married.</span><br />
+                i.marry(u);<br />
+                <span class="comments">// I can't say how every time I ever put my arms around you I felt that I was home.</span><br />
+                <span class="comments">// I like your smile, they are the beginning of our new day.</span><br />
+                i.liveHappilyWith(u);<br />
 
-		<!-- Styles and Scripts -->
-		<link rel="stylesheet" type="text/css" href="css/vno.css" />
-		<link href="css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/tomorrow.css">
-		<!-- Ghost Head  -->
+                
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        JoJo, We have fallen in love for
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        Love u forever and ever.<br />
+                        <div class="signature">- Liujingjie</div>
+                    </div>
+                </div>
+            </div>
+            <audio style="display:none;" controls="controls" loop="loop" autoplay="autoplay">
+                <source src="./song/simplelove.mp3" type="audio/mpeg" />
+            </audio>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        var together = new Date();
+        together.setFullYear(2014, 7, 1);
+        together.setHours(12);
+        together.setMinutes(0);
+        together.setSeconds(0);
+        together.setMilliseconds(0);
 
-	</head>
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                startHeartAnimation();
+            }, 5000);
 
-	<body class="home-template no-js">
+            timeElapse(together);
+            setInterval(function () {
+                timeElapse(together);
+            }, 500);
 
-		<span class="mobile btn-mobile-menu">
-        <i class="fa fa-list btn-mobile-menu__icon"></i>
-        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
-    </span>
-
-		<header class="panel-cover ">
-
-			<div class="panel-main">
-
-				<div class="panel-main__inner panel-inverted">
-					<div class="panel-main__content">
-
-						<a href="http://seeyouethan.top" title="前往 Seeyouethan 的主页">
-							<img src="img/headimg.jpg" width="90" alt="Goileo Lee logo" class="panel-cover__logo logo" /></a>
-
-						<h1 class="panel-cover__title panel-title"><a href="http://goileo.top" title="link to homepage for Goileo Lee">Seeyouethan</a></h1>
-						<span class="panel-cover__subtitle panel-subtitle">welcome to seeyouethan's site</span>
-						<hr class="panel-cover__divider" />
-						<p class="panel-cover__description">深沉的意志，恢宏的想象和炽热的情感</p>
-						<hr class="panel-cover__divider panel-cover__divider--secondary" />
-
-						<div class="navigation-wrapper">
-							<div>
-								<nav class="cover-navigation cover-navigation--primary">
-									<ul class="navigation">
-										<li class="navigation__item">
-											<a href="#" title="Link1" class="blog-button">Link1</a>
-										</li>
-										<li class="navigation__item">
-											<a href="#" title="Link2">Link2</a>
-										</li>
-										<li class="navigation__item">
-											<a href="#" title="关于Seeyouethan">关于</a>
-										</li>
-									</ul>
-								</nav>
-							</div>
-							<div>
-								<nav class="cover-navigation navigation--social">
-									<ul class="navigation">
-
-										<!-- Github -->
-										<li class="navigation__item">
-											<a href="http://github.com/seeyouethan" title="Seeyouethan 的 Github" target="_blank">
-												<i class='social fa fa-github'></i>
-												<span class="label">Github</span>
-											</a>
-										</li>
-
-										<!-- Weibo -->
-										<li class="navigation__item">
-											<a href="#" title="@null" target="_blank">
-												<i class='social fa fa-weibo'></i>
-												<span class="label">Weibo</span>
-											</a>
-										</li>
-
-										<!-- Twitter -->
-										<li class="navigation__item">
-											<a href="#" title="@null" target="_blank">
-												<i class='social fa fa-twitter'></i>
-												<span class="label">Twitter</span>
-											</a>
-										</li>
-
-										<!-- RSS -->
-										<li class="navigation__item">
-											<a href="#" rel="author" title="RSS-null" target="_blank">
-												<i class='social fa fa-rss'></i>
-												<span class="label">RSS</span>
-											</a>
-										</li>
-
-										<!-- Email -->
-										<li class="navigation__item">
-											<a href="mailto:seeyouethan@163.com" title="seeyouethan@163.com">
-												<i class='social fa fa-envelope'></i>
-												<span class="label">Email</span>
-											</a>
-										</li>
-
-									</ul>
-								</nav>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="panel-cover--overlay cover-blue"></div>
-			</div>
-		</header>
-		<!-- Ghost Footer  -->
-
-		<!--  The main JavaScript file -->
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-		<!-- Highlight.js /assets/js/ -->
-		<script type="text/javascript" src="js/highlight.pack.js"></script>
-		<script>
-			hljs.initHighlightingOnLoad();
-		</script>
-
-	</body>
-
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+</body>
 </html>
